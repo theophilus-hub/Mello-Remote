@@ -2,8 +2,34 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const format2 = (n: number) => n.toString().padStart(2, "0");
+  const getNextFebFirst = () => {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const febFirstThisYear = new Date(currentYear, 1, 1, 0, 0, 0, 0);
+    const targetYear = now < febFirstThisYear ? currentYear : currentYear + 1;
+    return new Date(targetYear, 1, 1, 0, 0, 0, 0);
+  };
+  useEffect(() => {
+    const target = getNextFebFirst();
+    const tick = () => {
+      const now = new Date();
+      let ms = target.getTime() - now.getTime();
+      if (ms < 0) ms = 0;
+      const days = Math.floor(ms / 86400000);
+      const hours = Math.floor((ms % 86400000) / 3600000);
+      const minutes = Math.floor((ms % 3600000) / 60000);
+      const seconds = Math.floor((ms % 60000) / 1000);
+      setTimeLeft({ days, hours, minutes, seconds });
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-black">
       {/* Background gradient overlay */}
@@ -117,13 +143,62 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="mt-8 max-w-4xl text-center text-2xl leading-relaxed text-gray-300 md:text-3xl lg:text-4xl"
+          className="mt-6 max-w-4xl text-center text-xl leading-relaxed text-gray-300 md:text-2xl lg:text-3xl"
         >
           Working from the comfort of their homes with this new{" "}
           <span className="font-semibold text-[#FF9500]">"MelloRemote Access"</span>{" "}
           — allowing them to acquire and secure a financially rewarding remote job in less than{" "}
           <span className="font-semibold text-[#FF9500]">30 days</span>.
         </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+          className="mt-6 flex w-full flex-col items-center justify-center"
+        >
+           <h3 className="text-center text-base font-semibold uppercase tracking-wide text-[#FF9500] md:text-lg">
+              Free Remote Class Starts In
+            </h3>
+          <div className="flex flex-wrap items-stretch justify-center gap-3">
+            <div className="min-w-[80px] rounded-xl border border-[#FF9500]/30 bg-[#FF9500]/10 px-4 py-3 text-center">
+              <div className="text-3xl font-bold text-white tabular-nums">{timeLeft.days}</div>
+              <div className="text-xs uppercase tracking-wide text-gray-400">Days</div>
+            </div>
+            <div className="min-w-[80px] rounded-xl border border-[#FF9500]/30 bg-[#FF9500]/10 px-4 py-3 text-center">
+              <div className="text-3xl font-bold text-white tabular-nums">{format2(timeLeft.hours)}</div>
+              <div className="text-xs uppercase tracking-wide text-gray-400">Hours</div>
+            </div>
+            <div className="min-w-[80px] rounded-xl border border-[#FF9500]/30 bg-[#FF9500]/10 px-4 py-3 text-center">
+              <div className="text-3xl font-bold text-white tabular-nums">{format2(timeLeft.minutes)}</div>
+              <div className="text-xs uppercase tracking-wide text-gray-400">Minutes</div>
+            </div>
+            <div className="min-w-[80px] rounded-xl border border-[#FF9500]/30 bg-[#FF9500]/10 px-4 py-3 text-center">
+              <div className="text-3xl font-bold text-white tabular-nums">{format2(timeLeft.seconds)}</div>
+              <div className="text-xs uppercase tracking-wide text-gray-400">Seconds</div>
+            </div>
+          </div>
+          <div className="mt-4 flex w-full flex-col items-center justify-center gap-3">
+           
+            <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-3">
+              <a
+                href="https://chat.whatsapp.com/DstslOBVHWKKoq3MAkOBvm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-[#FF9500] px-4 py-2 text-sm font-semibold text-black transition-all hover:bg-[#FFB340]"
+              >
+                Join WhatsApp Group
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-[#FF9500] px-4 py-2 text-sm font-semibold text-[#FF9500] transition-all hover:bg-[#FF9500]/10"
+              >
+                Join Telegram Channel
+              </a>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Testimonial */}
         <motion.div
@@ -880,9 +955,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <button className="mt-auto w-full rounded-lg bg-[#FF9500] py-3 font-semibold text-black transition-all hover:bg-[#FFB340]">
-                Get Started
-              </button>
+              <a href="https://chat.whatsapp.com/DstslOBVHWKKoq3MAkOBvm">
+                <button className="mt-auto w-full rounded-lg bg-[#FF9500] py-3 font-semibold text-black transition-all hover:bg-[#FFB340]">
+                  Join WhatsApp Group
+                </button>
+              </a>
             </motion.div>
 
             {/* Goldmine VIP */}
@@ -945,10 +1022,12 @@ export default function Home() {
                   <span className="text-sm text-gray-300">Direct Whatsapp or Chat Access for Instant Support</span>
                 </div>
               </div>
-
-              <button className="mt-auto w-full rounded-lg border border-[#FF9500] bg-transparent py-3 font-semibold text-[#FF9500] transition-all hover:bg-[#FF9500] hover:text-black">
-                Get Started
+                <a href="https://chat.whatsapp.com/DstslOBVHWKKoq3MAkOBvm">
+                  <button className="mt-auto w-full rounded-lg border border-[#FF9500] bg-transparent py-3 font-semibold text-[#FF9500] transition-all hover:bg-[#FF9500] hover:text-black">
+                Join WhatsApp Group
               </button>
+                </a>
+              
             </motion.div>
           </div>
         </div>
