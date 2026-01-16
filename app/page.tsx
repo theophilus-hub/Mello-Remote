@@ -189,7 +189,7 @@ export default function Home() {
                 Join WhatsApp Group
               </a>
               <a
-                href="#"
+                href="https://t.me/MelloAcademy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full border border-[#FF9500] px-4 py-2 text-sm font-semibold text-[#FF9500] transition-all hover:bg-[#FF9500]/10"
@@ -214,6 +214,286 @@ export default function Home() {
           </p>
         </motion.div>
       </div>
+
+ {/* Good News Section */}
+      <section className="relative z-10 bg-gradient-to-b from-black via-[#0a0a0a] to-black px-6 py-20 md:px-12 lg:px-20">
+        <div className="mx-auto max-w-6xl">
+          {/* Main Headline */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="mb-12 text-center"
+          >
+            <h2 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+              <span className="text-[#FF9500]">The Good News:</span> Remote Job Sourcing Rush Is Here
+              <br />
+              <span className="text-white">Will You Lock In?</span>
+            </h2>
+            
+            <p className="mt-6 text-lg italic leading-relaxed text-gray-400 md:text-xl">
+              "The good news is right now, We're living in the BIGGEST remote work REVOLUTION in history creating financial opportunities for anyone with a phone, internet, and a little guidance...."
+            </p>
+          </motion.div>
+
+          {/* Key Points */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-16 space-y-8"
+          >
+            <h3 className="text-2xl font-bold text-white md:text-3xl">Here's why:</h3>
+
+            <div className="space-y-6">
+              {/* Point 1 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="flex gap-4"
+              >
+                <div className="flex-shrink-0">
+                  <svg className="h-6 w-6 text-green-500 md:h-7 md:w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p className="text-base leading-relaxed text-gray-300 md:text-lg">
+                  Remote jobs are now <span className="font-semibold text-white">open to global talent</span> — companies don't care where you live. Earn in dollars, pounds, or euros right from your home.
+                </p>
+              </motion.div>
+
+              {/* Point 2 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="flex gap-4"
+              >
+                <div className="flex-shrink-0">
+                  <svg className="h-6 w-6 text-green-500 md:h-7 md:w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p className="text-base leading-relaxed text-gray-300 md:text-lg">
+                  You <span className="font-semibold text-white">don't need a degree</span> — high-paying roles focus on skills like customer service, virtual assistance, and content creation that can be mastered quickly.
+                </p>
+              </motion.div>
+
+              {/* Point 3 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="flex gap-4"
+              >
+                <div className="flex-shrink-0">
+                  <svg className="h-6 w-6 text-green-500 md:h-7 md:w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p className="text-base leading-relaxed text-gray-300 md:text-lg">
+                  Remote work gives you <span className="font-semibold text-white">freedom and flexibility</span> — create your own lifestyle and schedule from anywhere.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Call-out Box */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="rounded-2xl border border-[#FF9500]/30 bg-gradient-to-br from-[#FF9500]/10 to-transparent p-8 text-center backdrop-blur-sm md:p-12"
+          >
+            <h3 className="mb-6 text-2xl font-bold text-white md:text-3xl">
+              But here's the key:
+            </h3>
+            
+            <p className="mb-4 text-lg leading-relaxed text-gray-200 md:text-xl">
+              REMOTE JOBS can not Exist without You — Big Companies are looking for people from developing countries to hire instead of paying premium rates locally.
+            </p>
+
+            <p className="mb-6 text-base leading-relaxed text-gray-300 md:text-lg">
+              All you need is the Right Knowledge and Access to these Opportunities — <span className="font-bold text-white">that's where I come in.</span>
+            </p>
+
+            <p className="text-xl font-bold italic text-[#FF9500] md:text-2xl">
+              REMOTE JOBS are Goldmine. MELLOREMOTE ACCESS is the pickaxe.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="relative z-10 bg-gradient-to-b from-black via-[#0a0a0a] to-black px-6 py-12 md:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="mb-6 text-center"
+          >
+            <h2 className="mb-1 text-2xl font-bold text-white md:text-3xl">
+              MELLOREMOTE VIP
+            </h2>
+            <p className="text-sm text-gray-400">
+              Packages and Bundles
+            </p>
+          </motion.div>
+
+          {/* Pricing Cards */}
+          <div className="grid gap-4 md:grid-cols-2">
+            {/* Job Hacker - Featured */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative flex flex-col overflow-hidden rounded-2xl border-2 border-[#FF9500] bg-gradient-to-b from-[#FF9500]/10 to-black p-6 shadow-2xl shadow-[#FF9500]/20"
+            >
+              <div className="absolute right-4 top-4 rounded-full bg-[#FF9500] px-2 py-0.5 text-xs font-bold text-black">
+                POPULAR
+              </div>
+              
+              <div className="mb-6 text-center">
+                <div className="mb-3 text-4xl">🚀</div>
+                <h3 className="mb-2 text-xl font-bold text-white">
+                  The Remote Job Hacker
+                </h3>
+                <p className="mb-4 text-xs text-gray-400">
+                  How to Beat the System & Get Hired Fast
+                </p>
+                <div className="mb-1">
+                  <span className="text-4xl font-bold text-[#FF9500]">₦50,000</span>
+                </div>
+                <p className="text-xs text-gray-500">Guaranteed Single Job Value</p>
+              </div>
+
+              <div className="mb-6 space-y-3">
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">Full Advanced Course + Everything from Starter Pack</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">Granted Job in Less than 3 Months of this Programme</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">Priority Job Access (get Job Alerts 24 hours Before Starter)</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">Customizable Proposal & Cover Letter Template</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">Monthly Live Q&A Sessions or Support Check-ins</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">Access to Mini-Course [How to Land Your First Remote Job in 7 Days]</span>
+                </div>
+              </div>
+
+              <a href="https://wa.me/2349133853646?text=Goodday%20DreshMello%20I%20am%20interested%20in%20Paying%20for%20the%20N50,000%20Package%20for%20MELLOREMOTE%20VIP">
+                <button className="mt-auto w-full rounded-lg bg-[#FF9500] py-3 font-semibold text-black transition-all hover:bg-[#FFB340]">
+                  Get Started
+                </button>
+              </a>
+            </motion.div>
+
+            {/* Goldmine VIP */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="relative flex flex-col overflow-hidden rounded-2xl border border-gray-800 bg-gradient-to-b from-[#1a1a1a] to-black p-6 transition-all hover:border-[#FF9500]/50"
+            >
+              <div className="mb-6 text-center">
+                <div className="mb-3 text-4xl">🏆</div>
+                <h3 className="mb-2 text-xl font-bold text-white">
+                  REMOTE GOLDMINE VIP INNER CIRCLE
+                </h3>
+                <p className="mb-4 text-xs text-gray-400">
+                  Unlimited Jobs Value
+                </p>
+                <div className="mb-1">
+                  <span className="text-4xl font-bold text-[#FF9500]">₦100,000</span>
+                </div>
+                <p className="text-xs text-gray-500">/Unlimited Jobs Value</p>
+              </div>
+
+              <div className="mb-6 space-y-3">
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">Full Professional Course + Everything from Hacker Pack</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">1-on-1 Personalized Job Application Reviews (Cover Letters, CV, Resume, Proposals)</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">Access to Premium High-Paying Remote Jobs not shared Publicly</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">Monthly Strategy call or Mentorship Session with Me and other Remote workers</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">Job Referral Priority - Your Profile gets sent first when Companies Request New Candidates</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">Direct Whatsapp or Chat Access for Instant Support</span>
+                </div>
+              </div>
+                <a href="https://wa.me/2349133853646?text=Goodday%20DreshMello%20I%20am%20interested%20in%20Paying%20for%20the%20N100,000%20Package%20for%20MELLOREMOTE%20VIP">
+                  <button className="mt-auto w-full rounded-lg border border-[#FF9500] bg-transparent py-3 font-semibold text-[#FF9500] transition-all hover:bg-[#FF9500] hover:text-black">
+                Get Started
+              </button>
+                </a>
+              
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Success Stories Visual Section */}
       <section className="relative z-10 overflow-hidden bg-black py-8 md:py-16">
@@ -753,285 +1033,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Good News Section */}
-      <section className="relative z-10 bg-gradient-to-b from-black via-[#0a0a0a] to-black px-6 py-20 md:px-12 lg:px-20">
-        <div className="mx-auto max-w-6xl">
-          {/* Main Headline */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="mb-12 text-center"
-          >
-            <h2 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
-              <span className="text-[#FF9500]">The Good News:</span> Remote Job Sourcing Rush Is Here
-              <br />
-              <span className="text-white">Will You Lock In?</span>
-            </h2>
-            
-            <p className="mt-6 text-lg italic leading-relaxed text-gray-400 md:text-xl">
-              "The good news is right now, We're living in the BIGGEST remote work REVOLUTION in history creating financial opportunities for anyone with a phone, internet, and a little guidance...."
-            </p>
-          </motion.div>
-
-          {/* Key Points */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-16 space-y-8"
-          >
-            <h3 className="text-2xl font-bold text-white md:text-3xl">Here's why:</h3>
-
-            <div className="space-y-6">
-              {/* Point 1 */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="flex gap-4"
-              >
-                <div className="flex-shrink-0">
-                  <svg className="h-6 w-6 text-green-500 md:h-7 md:w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <p className="text-base leading-relaxed text-gray-300 md:text-lg">
-                  Remote jobs are now <span className="font-semibold text-white">open to global talent</span> — companies don't care where you live. Earn in dollars, pounds, or euros right from your home.
-                </p>
-              </motion.div>
-
-              {/* Point 2 */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="flex gap-4"
-              >
-                <div className="flex-shrink-0">
-                  <svg className="h-6 w-6 text-green-500 md:h-7 md:w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <p className="text-base leading-relaxed text-gray-300 md:text-lg">
-                  You <span className="font-semibold text-white">don't need a degree</span> — high-paying roles focus on skills like customer service, virtual assistance, and content creation that can be mastered quickly.
-                </p>
-              </motion.div>
-
-              {/* Point 3 */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex gap-4"
-              >
-                <div className="flex-shrink-0">
-                  <svg className="h-6 w-6 text-green-500 md:h-7 md:w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <p className="text-base leading-relaxed text-gray-300 md:text-lg">
-                  Remote work gives you <span className="font-semibold text-white">freedom and flexibility</span> — create your own lifestyle and schedule from anywhere.
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
-
-          {/* Call-out Box */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="rounded-2xl border border-[#FF9500]/30 bg-gradient-to-br from-[#FF9500]/10 to-transparent p-8 text-center backdrop-blur-sm md:p-12"
-          >
-            <h3 className="mb-6 text-2xl font-bold text-white md:text-3xl">
-              But here's the key:
-            </h3>
-            
-            <p className="mb-4 text-lg leading-relaxed text-gray-200 md:text-xl">
-              REMOTE JOBS can not Exist without You — Big Companies are looking for people from developing countries to hire instead of paying premium rates locally.
-            </p>
-
-            <p className="mb-6 text-base leading-relaxed text-gray-300 md:text-lg">
-              All you need is the Right Knowledge and Access to these Opportunities — <span className="font-bold text-white">that's where I come in.</span>
-            </p>
-
-            <p className="text-xl font-bold italic text-[#FF9500] md:text-2xl">
-              REMOTE JOBS are Goldmine. MELLOREMOTE ACCESS is the pickaxe.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="relative z-10 bg-gradient-to-b from-black via-[#0a0a0a] to-black px-6 py-12 md:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="mb-6 text-center"
-          >
-            <h2 className="mb-1 text-2xl font-bold text-white md:text-3xl">
-              MELLOREMOTE VIP
-            </h2>
-            <p className="text-sm text-gray-400">
-              Packages and Bundles
-            </p>
-          </motion.div>
-
-          {/* Pricing Cards */}
-          <div className="grid gap-4 md:grid-cols-2">
-            {/* Job Hacker - Featured */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative flex flex-col overflow-hidden rounded-2xl border-2 border-[#FF9500] bg-gradient-to-b from-[#FF9500]/10 to-black p-6 shadow-2xl shadow-[#FF9500]/20"
-            >
-              <div className="absolute right-4 top-4 rounded-full bg-[#FF9500] px-2 py-0.5 text-xs font-bold text-black">
-                POPULAR
-              </div>
-              
-              <div className="mb-6 text-center">
-                <div className="mb-3 text-4xl">🚀</div>
-                <h3 className="mb-2 text-xl font-bold text-white">
-                  The Remote Job Hacker
-                </h3>
-                <p className="mb-4 text-xs text-gray-400">
-                  How to Beat the System & Get Hired Fast
-                </p>
-                <div className="mb-1">
-                  <span className="text-4xl font-bold text-[#FF9500]">₦50,000</span>
-                </div>
-                <p className="text-xs text-gray-500">Guaranteed Single Job Value</p>
-              </div>
-
-              <div className="mb-6 space-y-3">
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Full Advanced Course + Everything from Starter Pack</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Granted Job in Less than 3 Months of this Programme</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Priority Job Access (get Job Alerts 24 hours Before Starter)</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Customizable Proposal & Cover Letter Template</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Monthly Live Q&A Sessions or Support Check-ins</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Access to Mini-Course [How to Land Your First Remote Job in 7 Days]</span>
-                </div>
-              </div>
-
-              <a href="https://chat.whatsapp.com/DstslOBVHWKKoq3MAkOBvm">
-                <button className="mt-auto w-full rounded-lg bg-[#FF9500] py-3 font-semibold text-black transition-all hover:bg-[#FFB340]">
-                  Join WhatsApp Group
-                </button>
-              </a>
-            </motion.div>
-
-            {/* Goldmine VIP */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="relative flex flex-col overflow-hidden rounded-2xl border border-gray-800 bg-gradient-to-b from-[#1a1a1a] to-black p-6 transition-all hover:border-[#FF9500]/50"
-            >
-              <div className="mb-6 text-center">
-                <div className="mb-3 text-4xl">🏆</div>
-                <h3 className="mb-2 text-xl font-bold text-white">
-                  REMOTE GOLDMINE VIP INNER CIRCLE
-                </h3>
-                <p className="mb-4 text-xs text-gray-400">
-                  Unlimited Jobs Value
-                </p>
-                <div className="mb-1">
-                  <span className="text-4xl font-bold text-[#FF9500]">₦100,000</span>
-                </div>
-                <p className="text-xs text-gray-500">/Unlimited Jobs Value</p>
-              </div>
-
-              <div className="mb-6 space-y-3">
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Full Professional Course + Everything from Hacker Pack</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">1-on-1 Personalized Job Application Reviews (Cover Letters, CV, Resume, Proposals)</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Access to Premium High-Paying Remote Jobs not shared Publicly</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Monthly Strategy call or Mentorship Session with Me and other Remote workers</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Job Referral Priority - Your Profile gets sent first when Companies Request New Candidates</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Direct Whatsapp or Chat Access for Instant Support</span>
-                </div>
-              </div>
-                <a href="https://chat.whatsapp.com/DstslOBVHWKKoq3MAkOBvm">
-                  <button className="mt-auto w-full rounded-lg border border-[#FF9500] bg-transparent py-3 font-semibold text-[#FF9500] transition-all hover:bg-[#FF9500] hover:text-black">
-                Join WhatsApp Group
-              </button>
-                </a>
-              
-            </motion.div>
-          </div>
-        </div>
-      </section>
+     
     </div>
   );
 }
