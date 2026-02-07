@@ -10,9 +10,9 @@ export default function Home() {
   const getNextFebFirst = () => {
     const now = new Date();
     const currentYear = now.getFullYear();
-    const febFirstThisYear = new Date(currentYear, 1, 1, 0, 0, 0, 0);
+    const febFirstThisYear = new Date(currentYear, 1, 13, 0, 0, 0, 0);
     const targetYear = now < febFirstThisYear ? currentYear : currentYear + 1;
-    return new Date(targetYear, 1, 1, 0, 0, 0, 0);
+    return new Date(targetYear, 1, 13, 0, 0, 0, 0);
   };
   useEffect(() => {
     const target = getNextFebFirst();
@@ -181,7 +181,7 @@ export default function Home() {
            
             <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-3">
               <a
-                href="https://chat.whatsapp.com/DstslOBVHWKKoq3MAkOBvm"
+                href="https://chat.whatsapp.com/K4ACu4G1kCAIN0Jq4udocW?mode=gi_t"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-[#FF9500] px-4 py-2 text-sm font-semibold text-black transition-all hover:bg-[#FFB340]"
