@@ -7,15 +7,15 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const format2 = (n: number) => n.toString().padStart(2, "0");
-  const getNextFebFirst = () => {
+  const getNextTargetDate = () => {
     const now = new Date();
-    const currentYear = now.getFullYear();
-    const febFirstThisYear = new Date(currentYear, 1, 13, 0, 0, 0, 0);
-    const targetYear = now < febFirstThisYear ? currentYear : currentYear + 1;
-    return new Date(targetYear, 1, 13, 0, 0, 0, 0);
+    const target = new Date(now);
+    target.setDate(target.getDate() + 5);
+    target.setHours(0, 0, 0, 0);
+    return target;
   };
   useEffect(() => {
-    const target = getNextFebFirst();
+    const target = getNextTargetDate();
     const tick = () => {
       const now = new Date();
       let ms = target.getTime() - now.getTime();
@@ -181,7 +181,7 @@ export default function Home() {
            
             <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-3">
               <a
-                href="https://chat.whatsapp.com/K4ACu4G1kCAIN0Jq4udocW?mode=gi_t"
+                href="https://chat.whatsapp.com/DbNbRu8wCqABcCNerDML9n?mode=gi_t"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-[#FF9500] px-4 py-2 text-sm font-semibold text-black transition-all hover:bg-[#FFB340]"
@@ -351,7 +351,62 @@ export default function Home() {
           </motion.div>
 
           {/* Pricing Cards */}
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-3">
+            {/* Starter Pack */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="relative flex flex-col overflow-hidden rounded-2xl border border-gray-800 bg-gradient-to-b from-[#1a1a1a] to-black p-6 transition-all hover:border-[#FF9500]/50"
+            >
+              <div className="absolute right-4 top-4 rounded-full bg-green-500 px-2 py-0.5 text-xs font-bold text-black">
+                NEW
+              </div>
+              
+              <div className="mb-6 text-center">
+                <div className="mb-3 text-4xl">�</div>
+                <h3 className="mb-2 text-xl font-bold text-white">
+                  The Remote Starter Pack
+                </h3>
+                <p className="mb-4 text-xs text-gray-400">
+                  Duration: 30 Days
+                </p>
+                <div className="mb-1">
+                  <span className="text-lg text-gray-500 line-through">₦15,000</span>
+                  <span className="ml-2 text-4xl font-bold text-[#FF9500]">₦7,500</span>
+                </div>
+                <p className="text-xs text-gray-500">Get Started Today</p>
+              </div>
+
+              <div className="mb-6 space-y-3">
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">Full Course on How to Land your First Remote job in Less than 30Days</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">2-4 Live Classes</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm text-gray-300">1 Job Recommendation (Salary: $400 - $1000 + Bonuses)</span>
+                </div>
+              </div>
+
+              <a href="https://wa.me/2349133853646?text=Goodday%20DreshMello%20I%20am%20interested%20in%20Paying%20for%20the%20N7,500%20Starter%20Pack%20for%20MELLOREMOTE%20VIP">
+                <button className="mt-auto w-full rounded-lg border border-[#FF9500] bg-transparent py-3 font-semibold text-[#FF9500] transition-all hover:bg-[#FF9500] hover:text-black">
+                  Get Started
+                </button>
+              </a>
+            </motion.div>
+
             {/* Job Hacker - Featured */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -370,12 +425,13 @@ export default function Home() {
                   The Remote Job Hacker
                 </h3>
                 <p className="mb-4 text-xs text-gray-400">
-                  How to Beat the System & Get Hired Fast
+                  Duration: 2 Months
                 </p>
                 <div className="mb-1">
-                  <span className="text-4xl font-bold text-[#FF9500]">₦50,000</span>
+                  <span className="text-lg text-gray-500 line-through">₦50,000</span>
+                  <span className="ml-2 text-4xl font-bold text-[#FF9500]">₦25,000</span>
                 </div>
-                <p className="text-xs text-gray-500">Guaranteed Single Job Value</p>
+                <p className="text-xs text-gray-500">Most Popular Choice</p>
               </div>
 
               <div className="mb-6 space-y-3">
@@ -383,41 +439,29 @@ export default function Home() {
                   <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-sm text-gray-300">Full Advanced Course + Everything from Starter Pack</span>
+                  <span className="text-sm text-gray-300">Full Advanced Course [Land Remote Job in 14 Days] + Everything from Starter Pack</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-sm text-gray-300">Granted Job in Less than 3 Months of this Programme</span>
+                  <span className="text-sm text-gray-300">Granted Job in Less than 2 Months of this Programme</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-sm text-gray-300">Priority Job Access (get Job Alerts 24 hours Before Starter)</span>
+                  <span className="text-sm text-gray-300">1 Personal Mentor with 25 Days of Live Mentorship</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-sm text-gray-300">Customizable Proposal & Cover Letter Template</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Monthly Live Q&A Sessions or Support Check-ins</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Access to Mini-Course [How to Land Your First Remote Job in 7 Days]</span>
+                  <span className="text-sm text-gray-300">4 Job Recommendations (Salary: $550 - $2000 + Bonuses)</span>
                 </div>
               </div>
 
-              <a href="https://wa.me/2349133853646?text=Goodday%20DreshMello%20I%20am%20interested%20in%20Paying%20for%20the%20N50,000%20Package%20for%20MELLOREMOTE%20VIP">
+              <a href="https://wa.me/2349133853646?text=Goodday%20DreshMello%20I%20am%20interested%20in%20Paying%20for%20the%20N25,000%20Job%20Hacker%20Package%20for%20MELLOREMOTE%20VIP">
                 <button className="mt-auto w-full rounded-lg bg-[#FF9500] py-3 font-semibold text-black transition-all hover:bg-[#FFB340]">
                   Get Started
                 </button>
@@ -432,18 +476,23 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="relative flex flex-col overflow-hidden rounded-2xl border border-gray-800 bg-gradient-to-b from-[#1a1a1a] to-black p-6 transition-all hover:border-[#FF9500]/50"
             >
+              <div className="absolute right-4 top-4 rounded-full bg-purple-500 px-2 py-0.5 text-xs font-bold text-white">
+                PREMIUM
+              </div>
+              
               <div className="mb-6 text-center">
                 <div className="mb-3 text-4xl">🏆</div>
                 <h3 className="mb-2 text-xl font-bold text-white">
-                  REMOTE GOLDMINE VIP INNER CIRCLE
+                  Remote Goldmine VIP Inner Circle
                 </h3>
                 <p className="mb-4 text-xs text-gray-400">
-                  Unlimited Jobs Value
+                  Duration: 2 Months
                 </p>
                 <div className="mb-1">
-                  <span className="text-4xl font-bold text-[#FF9500]">₦100,000</span>
+                  <span className="text-lg text-gray-500 line-through">₦100,000</span>
+                  <span className="ml-2 text-4xl font-bold text-[#FF9500]">₦50,000</span>
                 </div>
-                <p className="text-xs text-gray-500">/Unlimited Jobs Value</p>
+                <p className="text-xs text-gray-500">Ultimate VIP Access</p>
               </div>
 
               <div className="mb-6 space-y-3">
@@ -451,45 +500,33 @@ export default function Home() {
                   <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-sm text-gray-300">Full Professional Course + Everything from Hacker Pack</span>
+                  <span className="text-sm text-gray-300">Full Professional Course [Secure Remote Job in 7 Days] + Everything from Hacker Pack</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-sm text-gray-300">1-on-1 Personalized Job Application Reviews (Cover Letters, CV, Resume, Proposals)</span>
+                  <span className="text-sm text-gray-300">Granted Job in Less than 1 Month of this Programme</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-sm text-gray-300">Access to Premium High-Paying Remote Jobs not shared Publicly</span>
+                  <span className="text-sm text-gray-300">4-10 Personal Mentors with 40 Days of Live Mentorship</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-sm text-gray-300">Monthly Strategy call or Mentorship Session with Me and other Remote workers</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Job Referral Priority - Your Profile gets sent first when Companies Request New Candidates</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm text-gray-300">Direct Whatsapp or Chat Access for Instant Support</span>
+                  <span className="text-sm text-gray-300">10 Job Recommendations (Salary: $600 - $4000 + Bonuses)</span>
                 </div>
               </div>
-                <a href="https://wa.me/2349133853646?text=Goodday%20DreshMello%20I%20am%20interested%20in%20Paying%20for%20the%20N100,000%20Package%20for%20MELLOREMOTE%20VIP">
-                  <button className="mt-auto w-full rounded-lg border border-[#FF9500] bg-transparent py-3 font-semibold text-[#FF9500] transition-all hover:bg-[#FF9500] hover:text-black">
-                Get Started
-              </button>
-                </a>
-              
+
+              <a href="https://wa.me/2349133853646?text=Goodday%20DreshMello%20I%20am%20interested%20in%20Paying%20for%20the%20N50,000%20Goldmine%20VIP%20Package%20for%20MELLOREMOTE%20VIP">
+                <button className="mt-auto w-full rounded-lg border border-[#FF9500] bg-transparent py-3 font-semibold text-[#FF9500] transition-all hover:bg-[#FF9500] hover:text-black">
+                  Get Started
+                </button>
+              </a>
             </motion.div>
           </div>
         </div>
